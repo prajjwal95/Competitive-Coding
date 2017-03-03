@@ -1,0 +1,10 @@
+#!/bin/python3
+
+import sys
+
+def getFactorial(n):
+   r = 1
+   for x in range(n):
+     r = r * (x + 1)
+   return r
+print( getFactorial(int(input().strip())))
