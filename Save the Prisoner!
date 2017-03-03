@@ -1,0 +1,23 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int T,N,M,S;
+    cin>>T;
+    for(int i=0;i<T;i++){
+        cin>>N;
+        cin>>M;
+        cin>>S;
+        if((M+S-1)%N==0)
+          cout<<N<<"\n";
+        else
+            cout<<((M+S-1)%N)<<"\n";
+    }
+    return 0;
+  
+}
