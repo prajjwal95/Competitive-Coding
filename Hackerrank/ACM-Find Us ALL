@@ -1,0 +1,28 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    cin>>n;
+     long long int a0,a1,a2;
+    cin>>a0>>a1>>a2;
+    long long int A0,A1,A2;
+    while(n>0){
+        A0=(a1%1000000007)+(a2%1000000007);
+        A1=(a0%1000000007)+(a2%1000000007);
+        A2=(a0%1000000007)+(a1%1000000007);
+        a0=A0;
+        a1=A1;
+        a2=A2;
+        n--;
+    }
+    cout<<(a0%1000000007)<<endl;
+    cout<<(a1%1000000007)<<endl;
+    cout<<(a2%1000000007)<<endl; 
+    return 0;
+}
