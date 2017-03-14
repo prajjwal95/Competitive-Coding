@@ -1,0 +1,14 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+        
+def minimums(n):
+       if(n==2):
+            return "min(int, int)"
+       else:
+            return "min("+"int, "+minimums(n-1)+")"
+str=minimums(n)
+print(str)
