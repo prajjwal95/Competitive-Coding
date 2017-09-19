@@ -6,6 +6,7 @@ int main()
     cin>>t;
     while(t--){
         string s,s1;
+        int flag=0;
         s1="";
         int co[26]={0};
         cin>>s;
@@ -14,9 +15,14 @@ int main()
         }
         for(int i=0;i<s.length();i++){
             if(co[s[i]-'a']>1)
-                s1+=s[i];
+                {
+                    flag=1;
+                    cout<<"yes"<<endl;
+                    break;
+                }
         }
-            cout<<s1<<endl;
+        if(flag==0)
+            cout<<"no"<<endl;
     }
     return 0;
 }
